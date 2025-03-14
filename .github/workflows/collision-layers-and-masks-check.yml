@@ -45,7 +45,7 @@ jobs:
         run: |
           echo $PR_NUMBER > ./layers-and-masks/pr_number
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: layers-and-masks
           path: layers-and-masks

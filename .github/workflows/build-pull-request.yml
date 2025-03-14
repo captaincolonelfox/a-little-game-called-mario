@@ -54,7 +54,7 @@ jobs:
           echo $PR_SENDER > ./HTML5/pr_sender
           echo $PR_ACTION > ./HTML5/pr_action
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: pr
           path: HTML5

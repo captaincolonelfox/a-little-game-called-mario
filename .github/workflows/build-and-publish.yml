@@ -53,10 +53,11 @@ jobs:
             const script = require(path.resolve('.github/workflows/update-credits.js'));
             await script(github, context)
       - name: Add credits.txt to build artifacts list
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: credits
           path: credits.txt
+          overwrite: true
       - name: export with Godot Engine and release on GitHub
         uses: firebelley/godot-export@v3.0.0
         with:
