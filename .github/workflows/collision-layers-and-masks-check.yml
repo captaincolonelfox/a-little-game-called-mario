@@ -9,16 +9,12 @@ on:
 jobs:
   check_collision_layers_and_masks:
     runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:3.4
     steps:
       - name: Checkout latest code
         uses: actions/checkout@v2
 
-      - name: Setup Godot
-        uses: vitorgus/setup-godot@v1
-        with:
-          godot-version: 3.4.4
-          download-templates: false
-          
       - name: Run checks on collision_layer and collision_mask
         run: |
           mkdir layers-and-masks
